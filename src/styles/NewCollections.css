@@ -1,0 +1,11 @@
+.NewCollections {
+  position: relative;
+}
+.NewCollections .heading p {
+  color: white;
+}
+
+.NewCollections .cards {
+  display: flex;
+  /* justify-content: flex-start; */
+}

@@ -1,0 +1,28 @@
+.MovieCollections {
+  margin: 20px 0;
+}
+.MovieCollections .heading {
+  display: flex;
+  justify-content: space-between;
+}
+.MovieCollections .heading p:nth-child(1) {
+  color: white;
+}
+.MovieCollections .heading p:nth-child(2):hover {
+  position: relative;
+  bottom: 2px;
+  background: rgb(211, 208, 208);
+}
+.MovieCollections .heading p:nth-child(2) {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: rgb(21, 21, 44);
+  cursor: pointer;
+}
+
+.MovieCollections .cards {
+  display: flex;
+  /* justify-content: flex-start; */
+}
