@@ -44,17 +44,17 @@ const SideMenu = () => {
   return (
     <>
       <div onClick={() => setShowMenu(!showMenu)} className="hamburger">
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
       </div>
       <div className={`SideMenu ${showMenu ? "active" : null}`}>
         <div className="logo">
-          <i class="fas fa-blog"></i>Cinemeye
+          <i className="fas fa-blog"></i>Cinemeye
         </div>
         <div className="categories">
           <p>Categories</p>
           <ul>
-            {categories.map((ele) => (
-              <li>
+            {categories.map((ele, id) => (
+              <li key={id}>
                 <i className={ele.icon}></i>
                 {ele.name}
               </li>
@@ -68,17 +68,13 @@ const SideMenu = () => {
         <div className="store">
           <div className="apple">
             <i className="fab fa-apple"></i>
-            <p>
-              Available on the
-              <h3>Apple Store</h3>
-            </p>
+            <p>Available on the</p>
+            <h3>Apple Store</h3>
           </div>
           <div className="google">
             <i className="fab fa-google-play"></i>
-            <p>
-              Get it on
-              <h3>Google Play</h3>
-            </p>
+            <p>Get it on</p>
+            <h3>Google Play</h3>
           </div>
         </div>
       </div>

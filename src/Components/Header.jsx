@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="search">
-        <i class="fas fa-search"></i>
+        <i className="fas fa-search"></i>
         <input type="search" placeholder="search" />
       </div>
       <div className="language">
-        <i class="fas fa-globe-americas"></i> EN
+        <i className="fas fa-globe-americas"></i> EN
       </div>
       <div className="account">
         <button>Login</button>
