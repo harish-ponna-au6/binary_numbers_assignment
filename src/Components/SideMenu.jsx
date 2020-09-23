@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/SideMenu.css";
 
 const SideMenu = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const categories = [
     {
       icon: "fas fa-home",
@@ -41,42 +42,47 @@ const SideMenu = () => {
     }
   ];
   return (
-    <div className="SideMenu">
-      <div className="logo">
-        <i class="fas fa-blog"></i>Cinemeye
+    <>
+      <div onClick={() => setShowMenu(!showMenu)} className="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
-      <div className="categories">
-        <p>Categories</p>
-        <ul>
-          {categories.map((ele) => (
-            <li>
-              <i className={ele.icon}></i>
-              {ele.name}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <p className="lorem">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor.
-      </p>
-      <div className="store">
-        <div className="apple">
-          <i className="fab fa-apple"></i>
-          <p>
-            Available on the
-            <h3>Apple Store</h3>
-          </p>
+      <div className={`SideMenu ${showMenu ? "active" : null}`}>
+        <div className="logo">
+          <i class="fas fa-blog"></i>Cinemeye
         </div>
-        <div className="google">
-          <i className="fab fa-google-play"></i>
-          <p>
-            Get it on
-            <h3>Google Play</h3>
-          </p>
+        <div className="categories">
+          <p>Categories</p>
+          <ul>
+            {categories.map((ele) => (
+              <li>
+                <i className={ele.icon}></i>
+                {ele.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="lorem">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor.
+        </p>
+        <div className="store">
+          <div className="apple">
+            <i className="fab fa-apple"></i>
+            <p>
+              Available on the
+              <h3>Apple Store</h3>
+            </p>
+          </div>
+          <div className="google">
+            <i className="fab fa-google-play"></i>
+            <p>
+              Get it on
+              <h3>Google Play</h3>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

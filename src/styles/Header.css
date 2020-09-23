@@ -71,3 +71,36 @@
   background-color: #2c73f8;
   color: white;
 }
+
+@media only screen and (max-width: 1200px) {
+  .Header .search {
+    min-width: 500px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Header .search {
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Header {
+    display: block;
+  }
+  .Header .search {
+    min-width: 100px;
+    margin-bottom: 10px;
+  }
+  .Header .language {
+    width: 70px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .Header .account {
+    display: inline-block;
+    width: 230px;
+  }
+  .Header .account button {
+    margin-right: 10px;
+  }
+}

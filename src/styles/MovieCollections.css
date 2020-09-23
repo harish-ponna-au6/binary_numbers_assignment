@@ -24,5 +24,15 @@
 
 .MovieCollections .cards {
   display: flex;
+  flex-wrap: wrap;
   /* justify-content: flex-start; */
+}
+
+@media only screen and (max-width: 600px) {
+  .MovieCollections .cards {
+    justify-content: center;
+  }
+  .MovieCollections .cards img {
+    width: 250px;
+  }
 }
